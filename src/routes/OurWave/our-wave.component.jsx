@@ -1,9 +1,9 @@
 import './our-wave.styles.scss';
+import Main from '../../media/ourwave-main-min.png';
 
 const OurWave = () => {
     return (
         <div className='wave-outer-container'>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project' className='wave-main-image'/>
             <div className='wave-heading-outer-container'>
                 <div className='wave-heading-inner-container'>
                     <p className='wave-subtitle'>Case Study</p>
@@ -11,6 +11,7 @@ const OurWave = () => {
                     <p className='wave-time'>Jul 1, 2020 &#183; 10 min read</p>
                 </div>
             </div>
+            <img src={Main} alt='project' className='wave-main-image' loading='lazy'/>
             <div className='wave-content-outer-container'>
                 <div className='wave-content-inner-container'>
                     <h3>About This Project</h3>

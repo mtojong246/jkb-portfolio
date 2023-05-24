@@ -1,9 +1,9 @@
 import './lexis-nexis.styles.scss';
+import Main from '../../media/lexisnexis-main-min.png';
 
 const LexisNexis = () => {
     return (
         <div className='lexnex-outer-container'>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project' className='lexnex-main-image'/>
             <div className='lexnex-heading-outer-container'>
                 <div className='lexnex-heading-inner-container'>
                     <p className='lexnex-subtitle'>Case Study</p>
@@ -11,6 +11,7 @@ const LexisNexis = () => {
                     <p className='lexnex-time'>May 1, 2021 &#183; 7 min read</p>
                 </div>
             </div>
+            <img src={Main} alt='project' className='lexnex-main-image' loading='lazy'/>
             <div className='lexnex-content-outer-container'>
                 <div className='lexnex-content-inner-container'>
                     <h3>About this project</h3>

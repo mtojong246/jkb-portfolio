@@ -1,11 +1,11 @@
 import './card.styles.scss';
 import { Link } from 'react-router-dom';
 
-const Card = ({ subtitle, title, description, date, time, org }) => {
+const Card = ({ subtitle, title, description, date, time, org, img }) => {
     return (
       <Link to={`/${org}`} style={{ color: 'inherit', textDecoration: 'inherit'}} className='card-link'>
         <div className='card-container'>
-          <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project' />
+          <img src={img} alt={title} loading='lazy'/>
           <p className='card-subtitle'>{subtitle}</p>
           <h2 className='card-title'>{title}</h2>
           <p className='card-description'>{description}</p>

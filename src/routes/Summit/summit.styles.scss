@@ -1,5 +1,6 @@
 .summit-outer-container {
-    padding: 60px 0;
+    padding-top: 100px;
+    padding-bottom: 60px;
 
     img {
         width: 100%;
@@ -21,7 +22,7 @@
 }
 
 .summit-main-image {
-    padding-bottom: 24px;
+    padding-bottom: 60px;
 }
 
 .summit-heading-outer-container {
@@ -61,7 +62,7 @@
 
 .summit-content-inner-container {
     max-width: 720px;
-    margin: 0 auto;
+    margin: 30px auto;
 
     p, h2, h3, ul, li, ol {
         margin: 24px 0;
@@ -74,6 +75,7 @@
 
 }
 
+
 .summit-images-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -82,9 +84,10 @@
 .summit-caption {
     text-align: center;
     padding-top: 15px;
+    padding-bottom: 20px;
 
     span {
-        font-size: 13px;
+        font-size: 12px;
         color: rgba(0,0,0,0.4);
     }
 }

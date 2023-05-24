@@ -1,9 +1,9 @@
 import './clinical-trials.styles.scss';
+import Main from '../../media/clinical-main-min.png';
 
 const ClinicalTrials = () => {
     return (
         <div className='clinical-outer-container'>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project' className='clinical-main-image'/>
             <div className='clinical-heading-outer-container'>
                 <div className='clinical-heading-inner-container'>
                     <p className='clinical-subtitle'>Case Study</p>
@@ -11,6 +11,7 @@ const ClinicalTrials = () => {
                     <p className='clinical-time'>Oct 1, 2019 &#183; 9 min read</p>
                 </div>
             </div>
+            <img src={Main} alt='project' className='clinical-main-image' loading='lazy'/>
             <div className='clinical-content-outer-container'>
                 <div className='clinical-content-inner-container'>
                     <h3>About This Project:</h3>

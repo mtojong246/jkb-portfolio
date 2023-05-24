@@ -1,9 +1,10 @@
 import './summit.styles.scss';
+import Main from '../../media/summit-main-min.png';
+import Img1 from '../../media/summit-image1.svg';
 
 const Summit = () => {
     return (
         <div className='summit-outer-container'>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project' className='summit-main-image'/>
             <div className='summit-heading-outer-container'>
                 <div className='summit-heading-inner-container'>
                     <p className='summit-subtitle'>Case Study</p>
@@ -11,6 +12,7 @@ const Summit = () => {
                     <p className='summit-time'>Feb 28, 2022 &#183; 7 min read</p>
                 </div>
             </div>
+            <img src={Main} alt='project' className='summit-main-image' loading='lazy'/>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
                     <h3>About This Project</h3>
@@ -36,10 +38,8 @@ const Summit = () => {
                         <strong>Construction ranks almost dead last in terms of industry digitization. </strong>
                         According to a study performed by management consulting firm McKinsey & Company, the construction industry scored the lowest possible marks in the digitization of work, business processes, transactions, interactions, and asset stock.
                     </p>
-                </div>
-                <div className='summit-images-container'>
-                    <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
-                    <div className='summit-caption'><span>Caption</span></div>
+                    <img src={Img1} alt='project'/>
+                    <div className='summit-caption'><span>Construction is one of the least digitized sectors</span></div>
                 </div>
                 <div className='summit-content-inner-container'>
                     <p>

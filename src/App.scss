@@ -1,4 +1,19 @@
+.figmabox {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    p {
+        margin: 0;
+        font-size: 12px;
+    }
+}
 
 
 

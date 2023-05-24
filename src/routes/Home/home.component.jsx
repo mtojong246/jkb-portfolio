@@ -9,7 +9,7 @@ const Home = () => {
             <Header />
             <div className='home-container'>
             {data.map(project => (
-                <Card key={project.id} subtitle={project.subtitle} title={project.title} description={project.description} date={project.date} time={project.time} org={project.org}/>
+                <Card key={project.id} subtitle={project.subtitle} title={project.title} description={project.description} date={project.date} time={project.time} org={project.org} img={project.img}/>
             ))}
             </div>
         </>
