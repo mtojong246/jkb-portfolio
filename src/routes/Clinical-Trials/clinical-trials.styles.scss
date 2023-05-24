@@ -1,0 +1,142 @@
+.clinical-outer-container {
+    padding: 60px 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    hr {
+        width: 100%;
+        height: 1px;
+        margin: 50px auto;
+        background-color: #979797;
+        opacity: 0.2;
+    }
+
+    a {
+        color: #52796f;
+    }
+
+}
+
+.clinical-main-image {
+    padding-bottom: 24px;
+}
+
+.clinical-heading-outer-container {
+    padding: 0 20px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.clinical-heading-inner-container {
+    max-width: 720px;
+    margin: 0 auto;
+
+    p, h1 {
+        margin: 16px 0;
+    }
+}
+
+.clinical-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #979797;
+}
+
+.clinical-title {
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.clinical-time {
+    font-size: 14px;
+    color: #979797;
+}
+
+.clinical-content-outer-container {
+    padding: 0 20px;
+}
+
+.clinical-content-inner-container {
+    max-width: 720px;
+    margin: 0 auto;
+
+    p, h2, h3, ul, li, ol {
+        margin: 24px 0;
+    }
+
+    p {
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+}
+
+.clinical-images-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clinical-caption {
+    text-align: center;
+    padding-top: 15px;
+
+    span {
+        font-size: 13px;
+        color: rgba(0,0,0,0.4);
+    }
+}
+
+.sub {
+    padding-top: 12px;
+}
+
+.sub-image {
+    padding-top: 12px;
+    margin-top: 24px;
+}
+
+.clinical-list, .clinical-sublist, .clinical-sub-sublist {
+    padding: 0 27px 0 23px;
+    list-style-type: disc;
+
+    li {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.clinical-ordered-list {
+    padding: 0 27px 0 34px;
+    li {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 12px 0;
+    }
+}
+
+.clinical-references-list {
+    padding: 0 27px 0 34px;
+    li {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 24px 0;
+    }
+}
+
+.clinical-thanks-for-reading {
+    background-color: #34B7431F;
+    padding: 19px 25px;
+    border-radius: 5px;
+    margin: 100px 0;
+
+    span {
+        font-size: 19px;
+    }
+}
+
+.smiley {
+    padding-right: 10px;
+}

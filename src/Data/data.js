@@ -3,7 +3,7 @@ export const data = [
         id: 1,
         subtitle: 'Case Study',
         title: 'Modernizing Construction',
-        description: 'About This Project: This case study describes the process by which I helped Summit Contracting Group research and design a unified construction management platform. For the sake of simplicity, this case study will focus on Preconstruction – the portion of the organization that uses construction drawings to execute the subcontractor bidding',
+        description: 'This case study describes the process by which I helped Summit Contracting Group research and design a unified construction management platform. For the sake of simplicity, this case study will focus on Preconstruction – the portion of the organization that uses construction drawings to execute the subcontractor bidding',
         date: 'Feb 28, 2022',
         time: '7 min read',
         org: 'summit'
@@ -12,7 +12,7 @@ export const data = [
         id: 2,
         subtitle: 'Case Study',
         title: 'Simplifying Legal Case Management',
-        description: 'About This Project: This case study describes the process by which I helped LexisNexis redesign and successfully re-launch its flagship legal case management software',
+        description: 'This case study describes the process by which I helped LexisNexis redesign and successfully re-launch its flagship legal case management software',
         date: 'May 1, 2021',
         time: '7 min read',
         org: 'lexisnexis',
