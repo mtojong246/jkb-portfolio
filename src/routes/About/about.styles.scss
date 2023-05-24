@@ -1,0 +1,49 @@
+.about-outer-container {
+    padding: 120px 20px;
+}
+
+.about-inner-container {
+    max-width: 720px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 32px;
+        font-weight: 800;
+    }
+}
+
+.headshot-container {
+    margin: 12px 0;
+    text-align: center;
+
+    img {
+        width: 40%;
+        height: auto;
+    }
+}
+
+.about-text-container {
+    margin: 30px 0;
+
+    h2, p {
+        margin: 12px 0;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        line-height: 30px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-inner-container {
+    
+        h1 {
+            font-size: 52px;
+        }
+    }
+}

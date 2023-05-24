@@ -1,0 +1,16 @@
+.home-container {
+    padding: max(4.8vmin,36px) max(4vmin,20px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(autofill, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media screen and (min-width: 990px) {
+    .home-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

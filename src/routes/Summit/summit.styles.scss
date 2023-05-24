@@ -1,0 +1,142 @@
+.summit-outer-container {
+    padding: 60px 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    hr {
+        width: 100%;
+        height: 1px;
+        margin: 50px auto;
+        background-color: #979797;
+        opacity: 0.2;
+    }
+
+    a {
+        color: #52796f;
+    }
+
+}
+
+.summit-main-image {
+    padding-bottom: 24px;
+}
+
+.summit-heading-outer-container {
+    padding: 0 20px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.summit-heading-inner-container {
+    max-width: 720px;
+    margin: 0 auto;
+
+    p, h1 {
+        margin: 16px 0;
+    }
+}
+
+.summit-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #979797;
+}
+
+.summit-title {
+    font-weight: 800;
+    font-size: 32px;
+}
+
+.summit-time {
+    font-size: 14px;
+    color: #979797;
+}
+
+.summit-content-outer-container {
+    padding: 0 20px;
+}
+
+.summit-content-inner-container {
+    max-width: 720px;
+    margin: 0 auto;
+
+    p, h2, h3, ul, li, ol {
+        margin: 24px 0;
+    }
+
+    p {
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+}
+
+.summit-images-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.summit-caption {
+    text-align: center;
+    padding-top: 15px;
+
+    span {
+        font-size: 13px;
+        color: rgba(0,0,0,0.4);
+    }
+}
+
+.sub {
+    padding-top: 12px;
+}
+
+.sub-image {
+    padding-top: 12px;
+    margin-top: 24px;
+}
+
+.summit-list, .summit-sublist, .summit-sub-sublist {
+    padding: 0 27px 0 23px;
+    list-style-type: disc;
+
+    li {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.summit-ordered-list {
+    padding: 0 27px 0 34px;
+    li {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 12px 0;
+    }
+}
+
+.summit-references-list {
+    padding: 0 27px 0 34px;
+    li {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 24px 0;
+    }
+}
+
+.summit-thanks-for-reading {
+    background-color: #34B7431F;
+    padding: 19px 25px;
+    border-radius: 5px;
+    margin: 100px 0;
+
+    span {
+        font-size: 19px;
+    }
+}
+
+.smiley {
+    padding-right: 10px;
+}

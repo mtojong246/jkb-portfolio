@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Navigation from './components/Navigation/navigation.component';
+import { Routes, Route } from 'react-router-dom';
+import Home from './routes/Home/home.component';
+import Summit from './routes/Summit/summit.component';
+import LexisNexis from './routes/LexisNexis/lexis-nexis.component';
+import OurWave from './routes/OurWave/our-wave.component';
+import ClinicalTrials from './routes/Clinical-Trials/clinical-trials.component';
+import About from './routes/About/about.component';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path='/' element={<Navigation />} >
+        <Route index element={<Home />} />
+        <Route path='about' element={<About />} />
+        <Route path='summit' element={<Summit />} />
+        <Route path='lexisnexis' element={<LexisNexis />} />
+        <Route path='ourwave' element={<OurWave />} />
+        <Route path='clinical-trials' element={<ClinicalTrials />} />
+      </Route>
+    </Routes>
+  )
 }
 
 export default App;
