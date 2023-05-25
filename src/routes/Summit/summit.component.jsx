@@ -1,8 +1,26 @@
 import './summit.styles.scss';
 import Main from '../../media/summit-main-min.png';
 import Img1 from '../../media/summit-image1.svg';
+import Img2 from '../../media/summit-image-2-min.jpg';
+import Img3 from '../../media/summit-image-3-min.jpeg';
+import Img4 from '../../media/summit-image-4-min.jpeg';
+import Img5 from '../../media/summit-image-5-min.jpeg';
+import Img6 from '../../media/summit-image-6-min.jpeg';
+import Img7 from '../../media/summit-image-7-min.jpg';
+import EnlargeImage from '../../components/EnlargeImage/enlarge-image.component';
+import { useState } from 'react';
+
+const imgArray1 = [Img2, Img3, Img4, Img5, Img6, Img7];
 
 const Summit = () => {
+    const [ isPopup, setIsPopup ] = useState(false);
+    const [ image, setImage ] = useState('');
+
+    const togglePopup = (event) => {
+        setImage(event.currentTarget.src);
+        setIsPopup(!isPopup);
+    }
+
     return (
         <div className='summit-outer-container'>
             <div className='summit-heading-outer-container'>
@@ -38,7 +56,7 @@ const Summit = () => {
                         <strong>Construction ranks almost dead last in terms of industry digitization. </strong>
                         According to a study performed by management consulting firm McKinsey & Company, the construction industry scored the lowest possible marks in the digitization of work, business processes, transactions, interactions, and asset stock.
                     </p>
-                    <img src={Img1} alt='project'/>
+                    <img src={Img1} alt='project' onClick={togglePopup}/>
                     <div className='summit-caption'><span>Construction is one of the least digitized sectors</span></div>
                 </div>
                 <div className='summit-content-inner-container'>
@@ -63,8 +81,12 @@ const Summit = () => {
                     </p>
                 </div>
                 <div className='summit-images-container'>
-                    <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
-                    <div className='summit-caption'><span>Caption</span></div>
+                    <div className='summit-image-grid-1'>
+                    {imgArray1.map(img => (
+                        <img src={img} alt='proj' onClick={togglePopup}/>
+                    ))}
+                    </div>
+                    <div className='summit-caption'><span>Photos from the field</span></div>
                 </div>
                 <div className='summit-content-inner-container'>
                     <h3 className='sub'>Research Repo</h3>
@@ -244,6 +266,7 @@ const Summit = () => {
                     </ol>
                 </div>
             </div>
+            {isPopup && <EnlargeImage img={image} togglePopup={togglePopup} isPopup={isPopup}/>}
         </div>
     )
 }
