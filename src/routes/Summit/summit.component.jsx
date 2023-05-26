@@ -1,23 +1,10 @@
 import './summit.styles.scss';
 import Main from '../../media/summit-main-min.png';
-import Img1 from '../../media/summit-image1.svg';
-import Img2 from '../../media/summit-image-2-min.jpg';
-import Img3 from '../../media/summit-image-3-min.jpeg';
-import Img4 from '../../media/summit-image-4-min.jpeg';
-import Img5 from '../../media/summit-image-5-min.jpeg';
-import Img6 from '../../media/summit-image-6-min.jpeg';
-import Img7 from '../../media/summit-image-7-min.jpg';
-import Img13 from '../../media/summit-image-13-min.png';
-import Img14 from '../../media/summit-image-14-min.jpg';
-import Img15 from '../../media/summit-image-15-min.png';
-import Img16 from '../../media/summit-image-16-min.jpg';
-import Img17 from '../../media/summit-image-17-min.jpg';
-import Img18 from '../../media/summit-image-18-min.jpg';
+
 import FsLightbox from 'fslightbox-react';
 import { useState } from 'react';
 
-const galleryOne = [Img2, Img3, Img4, Img5, Img6, Img7];
-const imgArray = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img13, Img14, Img15, Img16, Img17, Img18]
+import { imgArray, galleryOne, galleryTwo, galleryThree } from '../../Data/data';
 
 const Summit = () => {
     const [ sourceIndex, setSourceIndex ] = useState(0);
@@ -58,7 +45,7 @@ const Summit = () => {
                         <strong>Construction ranks almost dead last in terms of industry digitization. </strong>
                         According to a study performed by management consulting firm McKinsey & Company, the construction industry scored the lowest possible marks in the digitization of work, business processes, transactions, interactions, and asset stock.
                     </p>
-                    <img src={Img1} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img1))}}/>
+                    <img src={imgArray[0]} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(0)}}/>
                     <div className='summit-caption'><span>Construction is one of the least digitized sectors</span></div>
                 </div>
                 <div className='summit-content-inner-container'>
@@ -85,7 +72,7 @@ const Summit = () => {
                 <div className='summit-images-container'>
                     <div className='summit-image-grid-1'>
                     {galleryOne.map(img => (
-                        <img src={img} alt='proj' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(img))}}/>
+                        <img src={img.src} alt='proj' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(img.src))}}/>
                     ))}
                     </div>
                     <div className='summit-caption'><span>Photos from the field</span></div>
@@ -100,8 +87,12 @@ const Summit = () => {
                     </p>
                 </div>
                 <div className='summit-images-container'>
-                    <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
-                    <div className='summit-caption'><span>Caption</span></div>
+                    <div className='summit-image-grid-2'>
+                    {galleryTwo.map(img => (
+                        <img src={img.src} alt='proj' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(img.src))}} style={{gridArea: `${img.gridArea}`}}/>
+                    ))}
+                    </div>
+                    <div className='summit-caption'><span>Screenshots of the research repository in Notion</span></div>
                 </div>
                 <div className='summit-content-inner-container'>
                     <h3 className='sub'>Key Findings</h3>
@@ -159,7 +150,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src={Img13} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img13))}}/>
+            <img src={imgArray[12]} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(12)}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -168,7 +159,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src={Img14} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img14))}}/>
+            <img src={imgArray[13]} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(13)}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -179,9 +170,9 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src={Img15} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img15))}}/>
+            <img src={imgArray[14]} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(14)}}/>
             <p className='spacer'></p>
-            <img src={Img16} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img16))}}/>
+            <img src={imgArray[15]} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(15)}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -191,7 +182,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src={Img17} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img17))}}/>
+            <img src={imgArray[16]} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(16)}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -201,7 +192,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src={Img18} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img18))}}/>
+            <img src={imgArray[16]} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(17)}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <hr />
             <div className='summit-content-outer-container'>
@@ -212,7 +203,11 @@ const Summit = () => {
                     </p>
                 </div>
                 <div className='summit-images-container'>
-                    <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
+                    <div className='summit-image-grid-3'>
+                    {galleryThree.map(img => (
+                        <img src={img.src} alt='proj' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(img.src))}} style={{gridArea: `${img.gridArea}`}}/>
+                    ))}
+                    </div>
                     <div className='summit-caption'><span>Caption</span></div>
                 </div>
                 <div className='summit-content-inner-container'>
@@ -269,8 +264,8 @@ const Summit = () => {
                         </li>
                     </ol>
                 </div>
+                <FsLightbox toggler={toggle} sources={[imgArray[sourceIndex]]} />
             </div>
-            <FsLightbox toggler={toggle} sources={[imgArray[sourceIndex]]} />
         </div>
     )
 }

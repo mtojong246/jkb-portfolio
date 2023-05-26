@@ -97,6 +97,39 @@
     }
 }
 
+.summit-image-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+
+
+    img {
+        object-fit: cover;
+        object-position: left top;
+        width: 100%;
+        height: 100%;
+        border: 5px solid #f1f1f1;
+    }
+}
+
+.summit-image-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+
+
+    img {
+        object-fit: cover;
+        object-position: left top;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .summit-images-container {
     max-width: 1200px;
     margin: 0 auto;
