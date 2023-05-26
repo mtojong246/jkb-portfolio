@@ -7,6 +7,10 @@
         height: auto;
     }
 
+    img:hover {
+        cursor: -webkit-zoom-in;
+    }
+
     hr {
         width: 100%;
         height: 1px;
@@ -19,6 +23,10 @@
         color: #52796f;
     }
 
+}
+
+.spacer {
+    margin: 10px 0;
 }
 
 .summit-main-image {
@@ -73,10 +81,6 @@
         font-size: 18px;
     }
 
-    img:hover {
-        cursor: pointer;
-    }
-
 }
 
 .summit-image-grid-1 {
@@ -97,9 +101,6 @@
     max-width: 1200px;
     margin: 0 auto;
 
-    img:hover {
-        cursor: pointer;
-    }
 }
 
 .summit-caption {

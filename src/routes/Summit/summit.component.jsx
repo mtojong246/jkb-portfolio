@@ -7,19 +7,21 @@ import Img4 from '../../media/summit-image-4-min.jpeg';
 import Img5 from '../../media/summit-image-5-min.jpeg';
 import Img6 from '../../media/summit-image-6-min.jpeg';
 import Img7 from '../../media/summit-image-7-min.jpg';
-import EnlargeImage from '../../components/EnlargeImage/enlarge-image.component';
+import Img13 from '../../media/summit-image-13-min.png';
+import Img14 from '../../media/summit-image-14-min.jpg';
+import Img15 from '../../media/summit-image-15-min.png';
+import Img16 from '../../media/summit-image-16-min.jpg';
+import Img17 from '../../media/summit-image-17-min.jpg';
+import Img18 from '../../media/summit-image-18-min.jpg';
+import FsLightbox from 'fslightbox-react';
 import { useState } from 'react';
 
-const imgArray1 = [Img2, Img3, Img4, Img5, Img6, Img7];
+const galleryOne = [Img2, Img3, Img4, Img5, Img6, Img7];
+const imgArray = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img13, Img14, Img15, Img16, Img17, Img18]
 
 const Summit = () => {
-    const [ isPopup, setIsPopup ] = useState(false);
-    const [ image, setImage ] = useState('');
-
-    const togglePopup = (event) => {
-        setImage(event.currentTarget.src);
-        setIsPopup(!isPopup);
-    }
+    const [ sourceIndex, setSourceIndex ] = useState(0);
+    const [ toggle, setToggle ] = useState(false);
 
     return (
         <div className='summit-outer-container'>
@@ -56,7 +58,7 @@ const Summit = () => {
                         <strong>Construction ranks almost dead last in terms of industry digitization. </strong>
                         According to a study performed by management consulting firm McKinsey & Company, the construction industry scored the lowest possible marks in the digitization of work, business processes, transactions, interactions, and asset stock.
                     </p>
-                    <img src={Img1} alt='project' onClick={togglePopup}/>
+                    <img src={Img1} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img1))}}/>
                     <div className='summit-caption'><span>Construction is one of the least digitized sectors</span></div>
                 </div>
                 <div className='summit-content-inner-container'>
@@ -82,8 +84,8 @@ const Summit = () => {
                 </div>
                 <div className='summit-images-container'>
                     <div className='summit-image-grid-1'>
-                    {imgArray1.map(img => (
-                        <img src={img} alt='proj' onClick={togglePopup}/>
+                    {galleryOne.map(img => (
+                        <img src={img} alt='proj' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(img))}}/>
                     ))}
                     </div>
                     <div className='summit-caption'><span>Photos from the field</span></div>
@@ -157,7 +159,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
+            <img src={Img13} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img13))}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -166,7 +168,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
+            <img src={Img14} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img14))}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -177,7 +179,9 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
+            <img src={Img15} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img15))}}/>
+            <p className='spacer'></p>
+            <img src={Img16} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img16))}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -187,7 +191,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
+            <img src={Img17} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img17))}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <div className='summit-content-outer-container'>
                 <div className='summit-content-inner-container'>
@@ -197,7 +201,7 @@ const Summit = () => {
                     </p>
                 </div>
             </div>
-            <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' alt='project'/>
+            <img src={Img18} alt='project' onClick={() => {setToggle(!toggle); setSourceIndex(imgArray.indexOf(Img18))}}/>
             <div className='summit-caption'><span>Caption</span></div>
             <hr />
             <div className='summit-content-outer-container'>
@@ -266,7 +270,7 @@ const Summit = () => {
                     </ol>
                 </div>
             </div>
-            {isPopup && <EnlargeImage img={image} togglePopup={togglePopup} isPopup={isPopup}/>}
+            <FsLightbox toggler={toggle} sources={[imgArray[sourceIndex]]} />
         </div>
     )
 }
